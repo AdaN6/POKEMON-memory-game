@@ -17,12 +17,13 @@ function App() {
 
   // shuffle cards
   const shuffleCards = () => {
-    const suffledCards = [...cardImages, ...cardImages]
-    .sort(() => Math.random() - 0.5)
-    .map((card) => ({ ...card, id: Math.random()}))
-    setCards(suffledCards);
-    setTurns(0)
-  }
+    const shuffledCards = [...cardImages, ...cardImages]
+      .sort(() => Math.random() - 0.5)
+      .map((card) => ({ ...card, id: Math.random() }));
+
+    setCards(shuffledCards);
+    setTurns(0);
+  };
 
   console.log(cards, turns)
 
@@ -30,9 +31,10 @@ function App() {
     <div className="App">
       <h1>Magic Match</h1>
       <button onClick={shuffleCards}>New Game</button>
+
       <div className="card-grid">
         {cards.map((card) => (
-          <SingleCard key={card.id} card={card}/>
+          <SingleCard key={card.id} card={card} />
         ))}
       </div>
     </div>
