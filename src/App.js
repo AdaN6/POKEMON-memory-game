@@ -55,7 +55,7 @@ function App() {
   }
  }, [choiceOne, choiceTwo])
 
- console.log(cards)
+//  console.log(cards)
 
  // reset choices & increase turn
  const resetTurn = () => {
@@ -81,6 +81,7 @@ function App() {
           />
         ))}
       </div>
+      <p>Turns: {turns} </p>
     </div>
   );
 }
