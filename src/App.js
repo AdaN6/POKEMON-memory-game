@@ -49,8 +49,7 @@ function App() {
       })
       resetTurn()
     } else {
-    
-      resetTurn()
+      setTimeout(()=> resetTurn(), 1200)
     }
   }
  }, [choiceOne, choiceTwo])
